@@ -12,14 +12,16 @@ const Razorpay=require('razorpay');
 const crypto=require('crypto');
 const Place=require('./models/Place');
 const Booking = require('./models/Booking');
+require('dotenv').config();
 const app=express();
 
-const jwtScretKey='knvhjhdd5655f65fdfdfff66ffs5fsd5fsd55f65hfsf56f56';
-const Razorpay_key_id='rzp_test_idNIYZeNs4uhA5'
-const Razorpay_secret_id='m8h6rjX0bS5pPoV1IYcc254I'
+const jwtScretKey=process.env.JWT_SECRET_KEY;
+const Razorpay_key_id=process.env.RAZORPAY_KEY_ID;
+const Razorpay_secret_id=process.env.RAZORPAY_SECRET_ID;
+const PORT=process.env.PORT;
 
 //mongodb connection start
-const url='mongodb://127.0.0.1:27017/people';
+const url=process.env.MONGO_DB_URL;   //lNfkuYaLUvQ5nJfi
 mongoose.connect(url);
 const conn=mongoose.connection;
 conn.once('open',()=>{console.log('database connection successful')});
@@ -274,4 +276,4 @@ app.post('/order/validate',(req,res)=>{
 
 });
 
-app.listen(4000,()=>console.log('server started'))
+app.listen(PORT,()=>console.log('server started'))
