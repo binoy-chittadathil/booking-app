@@ -29,7 +29,7 @@ function IndexPg() {
           <Link to={'/places/'+place._id} key={index} >
             <div className="rounded-2xl bg-gray-500 aspect-square mb-2">
             {place.photos.length>0 && (
-              <img className='aspect-square object-cover rounded-2xl' src={'http://localhost:4000/downloads/'+place.photos[0]} alt="" />
+              <img className='aspect-square object-cover rounded-2xl' src={'https://book-me-api.onrender.com/downloads/'+place.photos[0]} alt="" />
             )}
             </div>
             <h2 className="font-bold leading-4">{place.address}</h2>

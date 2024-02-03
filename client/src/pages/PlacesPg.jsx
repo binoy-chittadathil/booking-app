@@ -153,7 +153,7 @@ if(action==='new' || userPlaces.some((place)=>place._id===action)){
         <Link to={'/account/places/'+place._id} key={index} className='bg-gray-200 p-4 mt-4 rounded-2xl flex gap-4'>
           <div className='w-32 h-32 bg-gray-300 shrink-0 flex'>
             {place.photos.length>0 && (
-              <img className='object-cover' src={'http://localhost:4000/downloads/'+place.photos[0]} alt="" />
+              <img className='object-cover' src={'https://book-me-api.onrender.com/downloads/'+place.photos[0]} alt="" />
             )}
           </div>
           <div>

@@ -18,7 +18,7 @@ function BookingsPg() {
         <Link to={'/account/bookings/'+booking._id} key={index} className='grid sm:flex bg-gray-200 rounded-2xl overflow-hidden mt-4 gap-3' >
           {booking.place.photos.length>0 && (
            <div className=''>
-             <img className='sm:w-48 sm:h-36 aspect-square  object-cover '  src={"http://localhost:4000/downloads/"+booking.place.photos[0]} />
+             <img className='sm:w-48 sm:h-36 aspect-square  object-cover '  src={"https://book-me-api.onrender.com/downloads/"+booking.place.photos[0]} />
            </div>
           )}
           <div className='grid py-3'>

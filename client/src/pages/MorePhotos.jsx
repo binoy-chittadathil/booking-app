@@ -35,7 +35,7 @@ function MorePhotos() {
         <div className='grid gap-4 relative top-5'>
         {place.photos && place.photos.map((photo,index)=>(
           <div key={index} >
-            <img className='w-full ' src={"http://localhost:4000/downloads/"+photo}  />
+            <img className='w-full ' src={"https://book-me-api.onrender.com/downloads/"+photo}  />
           </div>
         )) }
       </div>

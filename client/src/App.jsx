@@ -15,7 +15,7 @@ import BookingPg from './pages/BookingPg'
 import BookingsPg from './pages/BookingsPg'
 
 // Set default configuration for all Axios requests
-axios.defaults.baseURL='http://localhost:4000';
+axios.defaults.baseURL='https://book-me-api.onrender.com';
 axios.defaults.withCredentials=true;  //Automatically include cookies in requests
 
 function App() {

@@ -78,7 +78,7 @@ app.post('/login',async (req,res)=>{
                 if(err){
                     throw err
                 }else{
-                    res.cookie('token',token).json(onlineUser)
+                    res.cookie('token',token,{ sameSite: 'None', secure: true }).json(onlineUser)
                 }
             })
         }else{
