@@ -34,7 +34,7 @@ conn.on('error',()=>{
 app.use(express.json()); //for parsing data
 app.use(cors({
     credentials:true,
-    origin:'https://bookfirst.netlify.app/'
+    origin:'https://bookfirst.netlify.app'
 }));
 
 // Set up Multer for single file upload
